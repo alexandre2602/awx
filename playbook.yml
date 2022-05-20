@@ -1,1 +1,11 @@
 ---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Criação do diretorio common
+      file:
+        path: /tmp/dir-teste-awx
+        state: directory
+        mode: '0755'
+        owner: root
+        group: root
